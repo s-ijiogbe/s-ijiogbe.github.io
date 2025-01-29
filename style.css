@@ -1,0 +1,15 @@
+body {
+    background-color: blanchedalmond;
+}
+
+h1, h2, nav {
+    text-align: center;
+}
+
+nav > a {
+    color: black;
+}
+
+nav > a:hover {
+    color: brown;
+}
