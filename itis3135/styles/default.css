@@ -6,11 +6,11 @@ h1, h2, nav {
     text-align: center;
 }
 
-nav > a {
+nav > a, nav > p > a {
     color: black;
 }
 
-nav > a:hover {
+nav > a:hover, nav > p > a:hover {
     color: brown;
 }
 
@@ -22,6 +22,10 @@ figure > img {
 
 figcaption {
     text-align: center;
+}
+
+p {
+    margin: 2rem;
 }
 
 
