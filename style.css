@@ -1,5 +1,7 @@
 body {
     background-color: blanchedalmond;
+    font-family: Bodoni MT, Garamond, serif;
+
 }
 
 h1, h2, nav {
@@ -12,4 +14,14 @@ nav > a {
 
 nav > a:hover {
     color: brown;
+}
+
+p {
+    margin: auto 2rem;
+}
+
+.validation-link {
+    border:0;
+    width:88px;
+    height:31px;
 }

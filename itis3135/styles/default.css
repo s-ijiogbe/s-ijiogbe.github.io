@@ -29,3 +29,9 @@ figcaption {
     padding-left: 30px;
     text-indent: -30px;
 }
+
+.validation-link {
+    border:0;
+    width:88px;
+    height:31px;
+}
