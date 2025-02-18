@@ -1,5 +1,6 @@
 body {
     background-color: blanchedalmond;
+    color: rgb(22, 21, 21);
 }
 
 main, footer {
@@ -14,7 +15,7 @@ h1, h2, nav {
 }
 
 nav > a, nav > p > a {
-    color: black;
+    color: rgb(22, 21, 21);
 }
 
 nav > a:hover, nav > p > a:hover {
@@ -47,4 +48,8 @@ p {
     border:0;
     width:88px;
     height:31px;
+}
+
+footer {
+    margin-top: 12%;
 }
