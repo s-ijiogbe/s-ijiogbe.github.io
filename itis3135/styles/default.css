@@ -14,11 +14,11 @@ h1, h2, nav {
     text-align: center;
 }
 
-nav > a, nav > p > a {
+nav a {
     color: rgb(22, 21, 21);
 }
 
-nav > a:hover, nav > p > a:hover {
+nav a:hover {
     color: brown;
 }
 
