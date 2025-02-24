@@ -1,6 +1,10 @@
+:root {
+    --body-color: rgb(22, 21, 21);
+}
+
 body {
     background-color: blanchedalmond;
-    color: rgb(22, 21, 21);
+    color: var(--body-color);
 }
 
 main, footer {
@@ -14,11 +18,11 @@ h1, h2, nav {
     text-align: center;
 }
 
-nav a {
-    color: rgb(22, 21, 21);
+a {
+    color: var(--body-color);
 }
 
-nav a:hover {
+a:hover {
     color: brown;
 }
 
