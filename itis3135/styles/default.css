@@ -8,10 +8,14 @@ body {
     max-width: 900px;
     margin: 0 auto;
     width: 90%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+header nav {
+    margin: 2%;
 }
 
 main, footer {
-    width: 90%;
     margin-left: auto;
     margin-right: auto;
 }
