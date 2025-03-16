@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Guitar</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        body {
+            font-family: Georgia, serif;
+            background-color: #f4f4f4;
+            color: #333;
+            margin: 0 auto;
+            max-width: 1400px;
+        }
+
+        header {
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            background: #444;
+            padding: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            cursor: pointer;
+            height: 28px;;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        main {
+            padding: 20px;
+            max-width: 80%;
+            margin: auto;
+        }
+
+        section {
+            display: none;
+            background: white;
+            margin-bottom: 20px;
+            padding: 15px;
+            max-width: 85%;
+            border-radius: 8px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        section.active {
+            display: block; /* Show the active section */
+        }
+
+        h2 {
+            color: #444;
+        }
+
+        figure {
+            text-align: center;
+        }
+
+        figcaption {
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #222;
+            color: white;
+        }
+
+        a {
+            color: #ff6600;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+                max-width: 95%;
+            }
+
+        @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 1200px;
+            }
+
+            nav {
+                /* flex-wrap: nowrap;
+                flex-direction: row; */
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+                gap: 10px;
+                justify-content: center;
+                text-align: center;
+
+            }
+        }
+
+        @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 850px;
+            }
+
+            nav {
+                /* flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center; */
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+                gap: 10px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            /* nav a {
+                flex: 1 1 150px;
+                text-align: center;
+            } */
+        }
+
+        @media screen and ( min-width: 371px ) and ( max-width: 600px ) {
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 500px;
+            }
+
+            nav {
+                /* flex-wrap: wrap;
+                flex-direction: row;
+                justify-content: center;
+                display: grid; */
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+                gap: 10px;
+                justify-content: center;
+                text-align: center;
+            }
+        }
+
+        @media screen and ( max-width: 370px ) {
+            main {
+                width: 95%;
+                margin: 0 auto;
+                max-width: 270px;
+            }
+
+            nav {
+                /* flex-direction: column; 
+                align-items: center; */
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
+                gap: 10px;
+                justify-content: center;
+                text-align: center;
+            }
+
+            nav a {
+                width: 100%; 
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>The Guitar</h1>
+        <nav>
+            <a onclick="showSection('who')">About Me</a>
+        <a onclick="showSection('what')">Home</a>
+        <a onclick="showSection('when')">Best Times</a>
+        <a onclick="showSection('where')">Best Locations</a>
+        <a onclick="showSection('how')">How To</a>
+        <a onclick="showSection('why')">Why I Love Guitar</a>
+        <a onclick="showSection('ai')">AI Prompts</a>
+        </nav>
+    </header>
+    <main>
+        <section id="who" class="active">
+            <h2>The Novice</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <p>My name is Stephanie Ijiogbe, self-proclaimed and true novice. I've been playing the guitar for about four years now, but yes, still a novice (I briefly considered renaming this site "Playing Guitar: the Art of Remaining a Novice"). I've always loved music, but for the longest time, I never entertined</p>
+            <p></p>
+        </section>
+        <section id="what" class="active">
+            <h2>What Does it Mean to Play the Guitar?</h2>
+            <figure>
+                <img src="images/free-photo-of-guitar-on-white-background.png" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <p>If you're unfamiliar with the instrument, the guitar </p>
+        </section>
+        <section id="when" class="active">
+            <h2>Best Times to Play</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </section>
+        <section id="where" class="active">
+            <h2>Best Locations to Play</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <p>I typically practice in my bedroom; it's where I'm most comfortable and I don't have to worry about being interrupted by anyone. And when you're a novice (like me), comfort is a really important thing, especially when you consider that everything else is about to get comfortable. My fingers really hated me when I first got started.</p>
+        </section>
+        
+        <section id="how" class="active">
+            <h2>How To Get Started</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+        </section>
+        
+        <section id="why" class="active">
+            <h2>Why I Love the Guitar</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <p>I'm rather indecisive about everything that I do. It gets to the point where I overthink something and eventually just end up not doing anything. But one of the few things I didn't overthink was getting a guitar. It's why I love it so much. As one of the decisions I was able to go through with, it has a very special place in my heart. </p>
+
+            <p>I'm not very good and I didn't even buy it with my own money (if I had, then I'd definitely have to keep at it), but I keep coming back to it. And despite my slow learning, I'm still having a lot of fun. I still love to play, it hasn't gotten old yet and I doubt it will.</p>
+        </section>
+        
+        <section id="ai">
+            <h2>AI Prompts</h2>
+            <figure>
+                <img src="" alt="">
+                <figcaption></figcaption>
+            </figure>
+            <ul>
+                <li>"What colors should I use to style my html page?"</li>
+                <li>"How can I style a section element?"</li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>Designed by <a href="../ssdesigns.com/index.html">SS Designs</a> &copy; 2025, <em>Certified in 
+            <a href="https://www.freecodecamp.org/certification/sijiogbe/responsive-web-design">Responsive Web Design </a></em> </p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll("main section").forEach(section => {
+                section.classList.remove("active");
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
+
+</body>
+</html>

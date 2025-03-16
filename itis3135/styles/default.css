@@ -63,3 +63,35 @@ p {
 footer {
     margin-top: 12%;
 }
+
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    main {
+        width: 95%;
+        margin: 0 auto;
+        max-width: 1200px;
+    }
+}
+
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    main {
+        width: 95%;
+        margin: 0 auto;
+        max-width: 850px;
+    }
+}
+
+@media screen and ( min-width: 370px ) and ( max-width: 600px ) {
+    html, body {
+        all:initial;
+    }
+
+    main {
+        width: 95%;
+        margin: 0 auto;
+        max-width: 500px;
+    }
+}
+
+
+
+
