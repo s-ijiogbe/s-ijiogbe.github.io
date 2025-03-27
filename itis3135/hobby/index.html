@@ -17,7 +17,7 @@
 
         header {
             background-color: #222;
-            color: white;
+            color: rgb(222, 219, 219);
             text-align: center;
             padding: 20px;
         }
@@ -25,7 +25,7 @@
         nav {
             display: flex;
             justify-content: center;
-            gap: 10px;
+            gap: 20px;
             background: #444;
             padding: 10px;
         }
@@ -40,12 +40,25 @@
         }
 
         nav a {
-            color: white;
+            color: rgb(222, 219, 219);
             text-decoration: none;
+            position: relative;
             margin: 0 15px;
+            padding: 0 10px;;
             cursor: pointer;
             height: 28px;
         }
+
+        nav a::after {
+            content: '\00a7';
+            position: absolute;
+            right: -20px;
+        }
+
+        nav a:last-child::after {
+            content: ''; 
+        }
+
 
         main {
             padding: 20px;
@@ -55,7 +68,7 @@
 
         section {
             display: none;
-            background: white;
+            background: rgb(245, 245, 245);
             margin-bottom: 20px;
             padding: 15px;
             max-width: 85%;
@@ -88,7 +101,7 @@
             text-align: center;
             padding: 20px;
             background: #222;
-            color: white;
+            color: rgb(222, 219, 219);
         }
 
         @media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
@@ -99,12 +112,11 @@
             }
 
             nav {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
-                text-align: center;
-
+                gap: 10px;
+                padding: 10px;
             }
         }
 
@@ -116,11 +128,11 @@
             }
 
             nav {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
-                text-align: center;
+                gap: 10px;
+                padding: 10px;
             }
 
             img {
@@ -141,11 +153,11 @@
             }
 
             nav {
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); 
-                gap: 10px;
+                display: flex;
+                flex-wrap: wrap;
                 justify-content: center;
-                text-align: center;
+                gap: 10px;
+                padding: 10px;
             }
 
             nav a {
@@ -203,58 +215,58 @@
         <a onclick="showSection('ai')">AI Prompts</a>
         </nav>
     </header>
+
     <main>
         <section id="who">
             <h2>The Novice</h2>
             <figure>
                 <img src="images/IMG_7139.png" alt="girl posing for a picture">
-                <figcaption>Returning from a wedding reception</figcaption>
+                <figcaption>Returning from a wedding reception. Courtesy of Stephanie Ijiogbe</figcaption>
             </figure>
             <p>
-                My name is Stephanie Ijiogbe, self-proclaimed and true novice. I've been playing the guitar for about four years now, but yes, still a novice (I briefly considered renaming this site "Playing Guitar: the Art of Remaining a Novice"). I've always loved music, but for the longest time, I never entertained the idea of making/playing it; I was satisfied just listening to it.
+                My name is Stephanie Ijiogbe, self-proclaimed and true novice. I've been playing the guitar for about four years now, but yes, still a novice. (I briefly considered renaming this site "Playing Guitar: The Art of Remaining a Novice"). I've always loved music, but for the longest time, I never entertained the idea of making or playing it — I was satisfied just listening to it. But I've been enjoying my time so far, and I would actually encourage others to take on musical hobbies as well.
             </p>
             <p>
-                I've learned how to play some rather basic songs like <em>Amazing Grace</em> and <em>Twinkle, Twinkle</em>, and you want to count <em>Happy Birthday</em> as one of them, be my guest. Though, you are I are going to be there for the better part of a n hour before I finish.
-                And while I mostly play the guitar, I've also been experimenting with my sister's violin. As of now, I only have one guitar (acoutic), but if I get more serious about this hobby of mine, I might invest in another.
+                I've learned how to play some rather basic songs like <em>Amazing Grace</em> and <em>Twinkle, Twinkle</em>, and if you want to count <em>Happy Birthday</em> as one of them, be my guest. Though you and I will be there for the better part of an hour before I finish. While I mostly play the guitar, I've also been experimenting with my sister's violin. And while I currently have only one guitar (acoustic), if I get more serious about this hobby of mine, I might invest in another.
             </p>
         </section>
         <section id="what" class="active">
             <h2>The Art of the Guitar</h2>
             <figure>
                 <img src="images/free-photo-of-guitar-on-white-background.png" alt="acoustic guitar on a stand">
-                <figcaption>Acoutic guitar on a stand</figcaption>
+                <figcaption>Acoustic guitar on a stand. Courtesy of Fernando FITDG (Pexels).</figcaption>
             </figure>
             <p>
-                If you're unfamiliar with the instrument (you might think it strange but remember that not all of us have the same experiences), the guitar is a stringed instrument that makes sound by plicking or strumming the strings. It typically has about six strings, but can apparently go up to twelve (which is news to me). There are different types of guitars as well. From acoustic to electric to classical, each created their own way and offering their own unique sound .
+                If you're unfamiliar with the instrument (you might think it strange but remember that not all of us have the same experiences), the guitar is a stringed instrument that makes sound by picking or strumming the strings. It typically has about six strings, but can apparently go up to twelve (which is news to me). There are different types of guitars as well. From acoustic to electric to classical, each created in their own way and offering their own unique sound.
             </p>
             <p>
-                Playing the guitar is a relatively popular hobby that allows musicians and average people alike to create and perform music. Some play for personal enjoyment, others play as a career, and the guitar is an instrument that can fit any style. Guitar playing typically involves techniques like strumming, fingerpicking, chord transitions, and slides, but beginners first learn basic chords and simple songs to get them started. But no matter the skill level, playing the guitar is an enriching and enjoyable enperience for all (admittedly maybe not so much for the people listening to you when you first get started).
+                Playing the guitar is a relatively popular hobby that allows musicians and average people alike to create and perform music. Some play for personal enjoyment, others play as a career, and the guitar is an instrument that can fit any style. Guitar playing typically involves techniques like strumming, fingerpicking, chord transitions, and slides, but beginners first learn basic chords and simple songs to get them started. But no matter the skill level, playing the guitar is an enriching and enjoyable experience for anyone (admittedly maybe not so much for the people listening to you when you first get started).
             </p>
         </section>
         <section id="when">
             <h2>Best Times to Play</h2>
             <figure>
                 <img src="images/free-photo-of-young-woman-with-acoustic-guitar.png" alt="young woman with acoustic guitar">
-                <figcaption>Young woman holding a guitar outside at night</figcaption>
+                <figcaption>Young woman holding a guitar outside at night. Courtesy of Stomy (Pexels).</figcaption>
             </figure>
             <p>
-                My favorite time to play is near nighttime, when the sun is beginning to set. I find it's the most quiet and everybody is beginning to settle down. I've finished my tasks for the day and I don't have any obligations. Everyone has settled on an activity they're going to spend the night doing and usually don't have to worry about them needing me for it since they haven't asked me yet. Everything is perfect.
+                My favorite time to play is around nighttime, when the sun is beginning to set or when the sun has completely disappeared. I find it's the most quiet and everybody is beginning to settle down. It's when I've finished my tasks for the day, and I don't have any other obligations. Everyone has settled on an activity they're going to spend the night doing and I usually don't have to worry about them needing me for it since they haven't asked me yet. Everything is perfect.
             </p>
             <p>
-                When it comes to seasons, I reserve my guitar playing for the Spring and Summer. Autumn and Winter are two seasons I don't like engaging with (my ancestors did not prepare me for weather like that). But Spring and Summer? Those seasons I can get behind. I especially love being huddled indoors while the clouds lose their minds outdoors, picking up the guitar by the window and just strumming whatever the hell I feel like (if you ever get the chance, try it; makes you feel like you're in a movie scene!). But the summer, with it clear, quiet nights are somehing else entirely, where it feels like the entire world has gone still and all you can hear are the strings of your guitar.
+                When it comes to seasons, I reserve my guitar playing for the Spring and Summer. Autumn and Winter are two seasons I don't like engaging with (my ancestors did not prepare me for weather like that). Spring and Summer? Those seasons I can get behind. I especially love being huddled indoors while the clouds lose their minds outdoors, picking up the guitar by the window and just strumming whatever I feel like (if you ever get the chance, try it; it makes you feel like you're in a movie scene!). But the summer, with its clear, quiet nights, is something else entirely, where it feels like the entire world has gone still, and all you can hear are the strings of your guitar.
             </p>
         </section>
         <section id="where">
             <h2>Best Locations to Play</h2>
             <figure>
                 <img src="images/pexels-photo-8929523.png" alt="guitar on an armchair">
-                <figcaption>A guitar placed on a bedroom chair</figcaption>
+                <figcaption>A guitar placed on a bedroom armchair. Courtesy of SHVETS production (Pexels).</figcaption>
             </figure>
             <p>
-                I typically practice in my bedroom; it's where I'm most comfortable and I don't have to worry about being interrupted by anyone. And when you're a novice (like me), comfort is a really important thing, especially when you consider that everything else is about to get comfortable. My fingers really hated me when I first got started.
+                I typically practice in my bedroom; it's where I'm most comfortable and I don't have to worry about being interrupted by anyone. And when you're a novice (like me), comfort is a really important thing, especially when you consider that everything else is about to get uncomfortable; my fingers were sore when I first got started. It won't sound great when you first start, so it's best to stay away from judging eyes and ears. Any location that offers the most peace and quiet is always the best option.
             </p>
             <p>
-                Sometimes though, when I'm home alone and the sun is beginning to set, I like to take my guitar to the backyard patio, under the gazebo for a little late-night strumming. I'm usually not trying to play any songs, but it's a lovely time to go over the chords I can remember and experiement on my own.
+                Sometimes though, when I'm home alone and the sun begins to set, I like to take my guitar to the backyard patio, under the gazebo for a little late-night strumming. I'm typically not trying to play any songs, but it's a lovely time to go over the chords I can remember and experiment on my own. I started out a bit self-conscious about the noise I was making (even though I really wasn't that loud), but then I remembered that my neighbors' dogs get to bark as much as they want, so what could be wrong with a bit of strumming? Evenings and nights have always been relaxing times for me, and pairing it with a nice patio, looking up at the night sky makes for the perfect combination.
             </p>
         </section>
         
@@ -262,25 +274,25 @@
             <h2>How To Get Started</h2>
             <figure>
                 <img src="images/pexels-photo-6671699.png" alt="woman with guitar and laptop">
-                <figcaption>Young woman with a guitar, opening her laptop</figcaption>
+                <figcaption>Young woman with a guitar, opening her laptop. Courtesy of Tima Miroshnichenko (Pexels).</figcaption>
             </figure>
             <p>
-                My guitar actually came with tutotial book. It taught me a few chords and some easy popular songs as well like <em>Twinkle, Twinkle</em> and <em>Happy Birthday</em>. If you're able to purchase a deal like that, I recommend it. Since it'll be your first guitar, there really is no point in you getting one that absurdly expensive. It's the guitar you getting to know if it's something you'd like to continue with and the one you'll make many mistakes with, so don't get oee that'll make you refret the purchase or one you'll be too afraid to tweak.
+                My guitar actually came with tutorial book. It taught me a few chords and some easy, popular songs as well like <em>Twinkle, Twinkle</em> and <em>Happy Birthday</em>. If you're able to purchase a deal like that, I recommend it. Since it'll be your first guitar, there really is no point in you getting one that absurdly expensive. It's the guitar you're using to know if it's a hobby you'd like to continue with and the one you'll make many mistakes with, so don't get one that'll make you regret the purchase or one you'll be too afraid to tweak.
             </p>
             <p>
-                I would also recommend youtube videos. I tried using apps, but it seems like the really good ones hide behind paywalls, and this was not a hobby I was ready to pay for. So I watched a bunch of youtube videos that taight more chords and melodies and others that teach you haw to play different songs. I would also advise to take it slow. Just becuase it's a song you like, it doesn't mean you should learn it. Some songs are harder to learn than others, so start easy and work your way up.
+                I would also recommend YouTube videos. I tried using apps, but it seems like the really good ones hide behind paywalls, and this was not a hobby I was ready to pay for. So I watched a bunch of YouTube videos that taught more chords and melodies, and others that teach you how to play different songs. I would also advise to take it slow. Just because it's a song you like, it doesn't mean you should learn it. Some songs are harder to learn than others, so start easy and work your way up.
             </p>
         </section>
         
         <section id="why">
             <h2>Why I Love the Guitar</h2>
             <figure>
-                <img src="images/istockphoto-1144613925-612x612.png" alt="">
-                <figcaption></figcaption>
+                <img src="images/free-photo-of-beautiful-woman-with-guitar.png" alt="woman laughing while playing the guitar">
+                <figcaption>Young woman laughing while holding a guitar. Courtesy of Lucas Andrade (Pexels)</figcaption>
             </figure>
-            <p>I'm rather indecisive about everything that I do. It gets to the point where I overthink something and eventually just end up not doing anything. But one of the few things I didn't overthink was getting a guitar. It's why I love it so much. As one of the decisions I was able to go through with, it has a very special place in my heart. </p>
+            <p>I'm rather indecisive about everything I do. It gets to the point where I overthink things so much, I eventually just end up not doing anything. But one of the few things I didn't overthink was getting a guitar. It's why I love it so much. As one of the decisions I was able to go through with, it has a very special place in my heart. It's a weird origin story but I was rewatching one of my guilty pleasures and I saw one of the leads in the movie play the guitar, and I instantly wanted one. Most would call that an impulsive decision, and frankly, I'm surprised I even went through with the purchase. But from the first moment I held that guitar, I was already enamored with it.</p>
 
-            <p>I'm not very good and I didn't even buy it with my own money (if I had, then I'd definitely have to keep at it), but I keep coming back to it. And despite my slow learning, I'm still having a lot of fun. I still love to play, it hasn't gotten old yet and I doubt it will.</p>
+            <p>I'm not very good and I didn't even buy it with my own money (if I had, then I'd definitely have to keep at it), but I keep coming back to it. And despite my slow learning, I'm still having a lot of fun. I still love to play; it hasn't gotten old yet and I doubt it will. I've been playing guitar for about four years now and each time I pick it up, I remember that it was one of the most exciting decisions I ever made. And the feeling it inspires only makes the session that more enjoyable.</p>
         </section>
         
         <section id="ai">
@@ -293,9 +305,12 @@
                 <li><q>I want my nav bar to move into different rows when the screen size changes. What are the different ways to accomplish that?</q></li>
                 <li><q>I don't want the rows to change with every small change in screen size.</q></li>
                 <li><q>What details can I include in the about me section of a guitar playing hobby site?</q></li>
+                <li><q>How would I center a divider between the items in my nav bar?</q></li>
+                <li><q>Do I have any grammatical errors?</q></li>
             </ul>
         </section>
     </main>
+
     <footer>
         <p>Designed by <a href="../ssdesigns.com/index.html">SS Designs</a> &copy; 2025, <em>Certified in 
             <a href="https://www.freecodecamp.org/certification/sijiogbe/responsive-web-design">Responsive Web Design </a></em> </p>

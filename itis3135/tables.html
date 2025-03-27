@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe "Secretive Impala" || ITIS 3135 || HTML Tables</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        h3 {
+            margin-top: 32px;
+        }
+        table {
+            width: 80%;
+            margin: 2px auto;
+            border-collapse: collapse;
+        }
+        figure table {
+            width: 90%;
+        }
+        tr {
+            text-align: left;
+        }
+
+        figure th {
+            width: 50%;
+        }
+
+        th, td {
+            padding: 5px 10px;
+            border: 1px solid black;
+        }
+
+        figure thead {
+            background-color: rgb(30, 30, 30);
+            color: rgb(245, 245, 245);
+        }
+
+        figure tbody tr:nth-child(odd) {
+            background-color: rgb(242, 242, 242);
+        }
+
+        figure tbody tr:nth-child(even) {
+            background-color: rgb(194, 194, 194);
+        }
+
+        tr:nth-of-type(odd) td[rowspan] {
+            background-color: rgb(110, 110, 110);
+            color: rgb(245, 245, 245);
+        }
+        
+
+        figure tfoot {
+            background-color: rgb(110, 110, 110);
+            color: rgb(245, 245, 245);
+        }
+
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+        <nav style="background-color: beige; height: 22px;">
+            <a href="stuff/STUfF%20%26%20craPpy.htm">Crappy Webpage</a>
+            &loz;
+            <a href="hobby/index.html">Hobby</a>
+            &loz;
+            <a href="./tables.html">HTML Tables</a>
+        </nav>
+    </header>
+    <main>
+        <h2>HTML Tables</h2>
+        <h3>My Tabular Data</h3>
+        <ol>
+            <li>Michaela Mbele mmbele@gmail.com 5</li>
+            <li>Sophia Ramirez sophiaramirez@yahoo.com 3</li>
+            <li>Nina Okafor nina.okafor@gmail.com 4</li>
+            <li>David Chen davidchen@hotmail.com 2</li>
+            <li>Aisha Patel aishaxpatel@gmail.com 2</li>
+            <li>Liam Anderson lianderson@outlook.com 3</li>
+            <li>Ethan Williamson ethan.travel@yahoo.com 2</li>
+        </ol>
+
+        <h3>Employee Data in Simple Table</h3>
+        <table>
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Experience (years)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Michaela Mbele</td>
+                    <td>mmbele@gmail.com</td>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <td>Sophia Ramirez</td>
+                    <td>sophiaramirez@yahoo.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Nina Okafor</td>
+                    <td>nina.okafor@gmail.com</td>
+                    <td>4</td>
+                </tr>
+                <tr>
+                    <td>David Chen</td>
+                    <td>davidchen@hotmail.com</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Aisha Patel</td>
+                    <td>aishaxpatel@gmail.com</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>Liam Anderson</td>
+                    <td>lianderson@outlook.com</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>Ethan Williamson</td>
+                    <td>ethan.travel@yahoo.com</td>
+                    <td>2</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <h3>Employee Data in Complex Table</h3>
+        <figure>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="category" scope="col">Category</th>
+                        <th id="name" scope="col">Name</th>
+                        <th id="email" scope="col">Email</th>
+                        <th id="experience" scope="col">Experience (years)</th>
+                        <th id="salary" scope="col">Monthly Salary</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td rowspan="2" headers="category">Heads</td>
+                        <td headers="category name">Michaela Mbele</td>
+                        <td headers="category email">mmbele@gmail.com</td>
+                        <td headers="category experience">5</td>
+                        <td headers="category salary">$9,500</td>
+                    </tr>
+                    <tr>
+                        <td headers="category name">Sophia Ramirez</td>
+                        <td headers="category email">sophiaramirez@yahoo.com</td>
+                        <td headers="category experience">3</td>
+                        <td headers="category salary">$7,500</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="2" headers="category">Travel Consultants</td>
+                        <td headers="category name">Nina Okafor</td>
+                        <td headers="category email">nina.okafor@gmail.com</td>
+                        <td headers="category experience">4</td>
+                        <td headers="category salary">$6,900</td>
+                    </tr>
+                    <tr>
+                        <td headers="category name">David Chen</td>
+                        <td headers="category email">davidchen@hotmail.com</td>
+                        <td headers="category experience">2</td>
+                        <td headers="category salary">$6,100</td>
+                    </tr>
+                    <tr>
+                        <td rowspan="3" headers="category">Experience Managers &amp; Planners</td>
+                        <td headers="category name">Aisha Patel</td>
+                        <td headers="category email">aishaxpatel@gmail.com</td>
+                        <td headers="category experience">2</td>
+                        <td headers="category salary">$5,600</td>
+                    </tr>
+                    <tr>
+                        <td headers="category name">Liam Anderson</td>
+                        <td headers="category email">lianderson@outlook.com</td>
+                        <td headers="category experience">3</td>
+                        <td headers="category salary">$4,800</td>
+                    </tr>
+                    <tr>
+                        <td headers="category name">Ethan Williamson</td>
+                        <td headers="category email">ethan.travel@yahoo.com</td>
+                        <td headers="category experience">2</td>
+                        <td headers="category salary">$4,800</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <th id="total" colspan="3">Total Years of Service</th>
+                        <td  headers="total experience">21</td>
+                        <td  headers="total salary">$45,000</td>
+                    </tr>
+                </tfoot>
+            </table>
+            <figcaption><em>Behind Secretive Impala Odysseys</em></figcaption>
+        </figure>
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/include.js"></script>
+</body>
+</html>
