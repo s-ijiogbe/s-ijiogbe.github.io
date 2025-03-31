@@ -53,6 +53,10 @@ p {
     margin: 2rem 0;
 }
 
+li {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 
 .hangingindent {
     padding-left: 30px;

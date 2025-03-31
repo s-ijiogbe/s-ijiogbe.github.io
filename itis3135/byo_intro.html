@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe "Secretive Impala"  || ITIS 3135 || BYO Intro</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+
+    <style>
+        input {
+            font-family:Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        input {
+            padding: 10px;
+            font-size: 16px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        #imageAlt, #imageCaption, textarea {
+            display: block;
+            width: 100%;
+            box-sizing: border-box;
+            padding: 10px;
+            font-size: 16px;
+            margin-bottom: 15px;
+            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            resize: none;
+        }
+
+        div p {
+            font-weight: bold;
+            margin-bottom: auto;
+        }
+
+        .buttons, .buttons:hover {
+            background-color: rgb(29, 51, 84);
+            color: rgb(245, 245, 245);
+            display: block;
+            text-align: center;
+            width: 100%;
+            padding: 15px;
+            font-size: 18px;
+            box-sizing: border-box;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .course-code-input {
+            width: 28%;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .course-name-input {
+            width: 70%;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+        }
+        .course-reason-input {
+            width: 100%;
+            height: 100px;
+            padding: 8px;
+            font-size: 16px;
+            box-sizing: border-box;
+            margin-bottom: 5px;
+            resize: none;
+        }
+
+        .course-reason-input::placeholder {
+    text-align: left;
+    vertical-align: top;
+}
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>BYO Intro</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page</h3>
+        
+        <form id="introductionForm">
+            <p>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName" value="Stephanie" required>
+            </p>
+
+            <p>
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName" value="Ijiogbe" required>
+            </p>
+              
+            <p>
+                <label for="mascot">Mascot:</label>
+                <input type="text" id="mascot" name="mascot" value="Secretive Impala" required>
+            </p>
+              
+            <p>
+                <label for="image">Image (PNG or JPG):</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
+            </p>
+
+            <p>
+                <label for="imageAlt">Image Alt Text:</label>
+                <input type="text" id="imageAlt" name="imageAlt" placeholder="Smiling girl in a white shirt" required>
+              </p>
+              
+            <p>
+                <label for="imageCaption">Image Caption:</label>
+                <input type="text" id="imageCaption" name="imageCaption" value="At a family photoshoot" required>
+            </p>
+              
+            <p>
+                <label for="personalBackground">Personal Background:</label>
+                <textarea id="personalBackground" name="personalBackground" rows="4" required>I was born in Edo State, Nigeria, and moved...</textarea>
+            </p>
+              
+            <p>
+                <label for="professionalBackground">Professional Background:</label>
+                <textarea id="professionalBackground" name="professionalBackground" rows="4" required>I’ve worked various jobs since high school including...</textarea>
+            </p>
+              
+            <p>
+                <label for="academicBackground">Academic Background:</label>
+                <textarea id="academicBackground" name="academicBackground" rows="4" required>I’m in my junior year here at...</textarea>
+            </p>
+              
+            <p>
+                <label for="webDevBackground">Background in Web Development:</label>
+                <textarea id="webDevBackground" name="webDevBackground" rows="4" required>I took a couple of web design and application courses in high school so I’m...</textarea>
+            </p>
+              
+            <p>
+                <label for="primaryPlatform">Primary Computer Platform:</label>
+                <input type="text" id="primaryPlatform" name="primaryPlatform" value="MacOS" required>
+            </p>
+              
+            <div class="courses-section">
+                <p>Courses Currently Taking:</p>
+                <ul id="courses-container"></ul>
+                <button type="button" id="course-btn">Add Course</button>
+            </div>
+            
+              
+    
+            <p>
+                <label for="funnyThing">Funny thing?</label>
+                <textarea id="funnyThing" name="funnyThing" placeholder="Funny thing about you" rows="4"></textarea>
+            </p>
+            
+            <p>
+                <label for="anythingElse">Anything else?</label>
+                <textarea id="anythingElse" name="anythingElse" placeholder="Any other interesting thing you'd like to add" rows="4"></textarea>
+            </p>
+              
+            <p>
+                <input type="checkbox" id="agreement" name="agreement" required>
+                <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
+                </label>
+            </p>
+
+            <input type="submit" class="buttons" value="Submit">
+            <input type="reset" class="buttons" value="Reset">
+
+            
+        </form>
+
+        <div id="resultSection" style="display: none;"></div>
+
+    </main>
+    
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>  
+    <script src="scripts/include.js"></script>
+    <script src="scripts/survey.js"></script>
+</body>
+</html>
