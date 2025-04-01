@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe "Secretive Impala" || ITIS 3135 || Form</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        label {
+            display: inline-flex;
+            align-items: center; 
+            gap: 5px; 
+            white-space: nowrap;
+        }
+
+        form>label {
+            display: block;
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 25px;
+        }
+
+        .checkbox-group, .radio-group {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: 40px;
+            row-gap: 10px;
+            align-items: center;
+        }
+
+        .checkbox-group label, .radio-group label {
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center; 
+            gap: 5px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif
+        }
+
+        fieldset {
+            border: none;
+            padding: 0;
+            margin: 25px 0;
+        }
+
+        legend {
+            font-weight: bold;
+            margin-bottom: 5px;
+            margin-top: 25px;
+            font-size: 16px;
+            display: block;
+        }
+
+
+        form>input, select, button {
+            display: block;
+            width: 100%;
+            margin-bottom: 15px;
+            padding: 10px;
+            font-size: 16px;
+            box-sizing: border-box;
+            border-color: rgb(11, 25, 88);
+            
+        }
+
+        button {
+            cursor: pointer;
+            border-radius: 5px;
+            background-color: rgb(11, 25, 88);
+            color: rgb(240, 240, 240);
+            padding: 10px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+    <main>
+        <h2>Form</h2>
+        <form action="#">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Jane Doe" required>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="janedoe@email.com" required>
+
+            <!-- <label>Your Ideal Travel Vibes:</label>
+            <div class="checkbox-group">
+                <label><input type="checkbox" name="vibes" value="relaxation"> Relaxation</label>
+                <label><input type="checkbox" name="vibes" value="adventure"> Adventure</label>
+                <label><input type="checkbox" name="vibes" value="culture"> Cultural Immersion</label>
+                <label><input type="checkbox" name="vibes" value="surprise-me"> Surprise Me!</label>
+            </div>
+
+            <label>Preferred Travel Duration:</label>
+            <div class="radio-group">
+                <label><input type="radio" name="duration" value="1week" required> 1 Week</label>
+                <label><input type="radio" name="duration" value="2weeks" required> 2 Weeks</label>
+                <label><input type="radio" name="duration" value="month" required> 1 Month</label>
+                <label><input type="radio" name="duration" value="more"> As Long As Possible</label>
+            </div> -->
+
+            <fieldset>
+                <legend>Your Ideal Travel Vibes:</legend>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="vibes" value="relaxation"> Relaxation</label>
+                    <label><input type="checkbox" name="vibes" value="adventure"> Adventure</label>
+                    <label><input type="checkbox" name="vibes" value="culture"> Cultural Immersion</label>
+                    <label><input type="checkbox" name="vibes" value="surprise-me"> Surprise Me!</label>
+                </div>
+            </fieldset>
+        
+            <fieldset>
+                <legend>Preferred Travel Duration:</legend>
+                <div class="radio-group">
+                    <label><input type="radio" name="duration" value="1week" required> 1 Week</label>
+                    <label><input type="radio" name="duration" value="2weeks" required> 2 Weeks</label>
+                    <label><input type="radio" name="duration" value="month" required> 1 Month</label>
+                    <label><input type="radio" name="duration" value="more" required> As Long As Possible</label>
+                </div>
+            </fieldset>
+
+            
+
+            <label for="travelMood">How Do You Feel About This Adventure?</label>
+            <select id="travelMood" name="travelMood" required>
+                <option value="" disabled selected>Choose your mood...</option>
+                <option value="excited">Excited!!!</option>
+                <option value="nervous">Nervous but Curious</option>
+                <option value="ready">I Was Born Ready!</option>
+                <option value="undecided">Still Deciding...</option>
+            </select>
+
+            <button type="reset">Reset</button>
+            <button type="submit">Submit Form</button>
+            
+        </form>
+        
+    </main>
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+    <script src="scripts/include.js"></script>
+</body>
+</html>

@@ -8,10 +8,6 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 
     <style>
-        input {
-            font-family:Verdana, Geneva, Tahoma, sans-serif
-        }
-
         label {
             display: block;
             font-weight: bold;
@@ -21,7 +17,7 @@
         input {
             padding: 10px;
             font-size: 16px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
 
         #imageAlt, #imageCaption, textarea {
@@ -31,7 +27,7 @@
             padding: 10px;
             font-size: 16px;
             margin-bottom: 15px;
-            font-family:Verdana, Geneva, Tahoma, sans-serif;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
             resize: none;
         }
 
@@ -56,34 +52,100 @@
             text-decoration: none;
         }
 
+        .delete-course {
+            margin-left: auto;
+            display: block;
+            padding: 5px 10px;
+            font-size: 14px;
+            background-color: #872f29;
+            color: rgb(245, 245, 245);
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+
+        #course-btn {
+            margin-left: 5%;
+            background-color: #236047;
+            color: rgb(245, 245, 245);
+            padding: 10px 10px;
+            border: none; 
+            border-radius: 5px;
+            cursor: pointer;
+            display: inline-block;
+        }
+
         .course-code-input {
             width: 28%;
-            padding: 8px;
-            font-size: 16px;
             box-sizing: border-box;
             margin-bottom: 5px;
         }
+
         .course-name-input {
             width: 70%;
-            padding: 8px;
-            font-size: 16px;
             box-sizing: border-box;
             margin-bottom: 5px;
         }
+
         .course-reason-input {
             width: 100%;
-            height: 100px;
-            padding: 8px;
-            font-size: 16px;
-            box-sizing: border-box;
+            height: 50px;
             margin-bottom: 5px;
             resize: none;
         }
 
         .course-reason-input::placeholder {
-    text-align: left;
-    vertical-align: top;
-}
+            text-align: left;
+            vertical-align: top;
+        }
+
+        .basic-information-row {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            box-sizing: border-box;
+            margin-bottom: 15px;
+        }
+
+        .basic-information {
+            flex: 1;
+        }
+
+        .basic-information input {
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        .image-information-row {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            margin-bottom: 15px;
+        }
+
+        .image-information {
+            flex: 1;
+        }
+
+        .image-information input {
+            width: 100%;
+        }
+
+        .hidden-label {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            white-space: nowrap;
+            border: 0;
+        }
+        
+
+        
     </style>
 </head>
 <body>
@@ -95,81 +157,100 @@
         <h3>Time to BYO Intro page, please fill out the form below so we can create your own page</h3>
         
         <form id="introductionForm">
-            <p>
-                <label for="firstName">First Name:</label>
-                <input type="text" id="firstName" name="firstName" value="Stephanie" required>
+            <p class="basic-information-row">
+                <span class="basic-information">
+                    <label for="firstName">First Name</label>
+                    <input type="text" id="firstName" name="firstName" value="Stephanie" required>
+                </span>
+            
+                <span class="basic-information">
+                    <label for="middleInitial">Middle Initial</label>
+                    <input type="text" id="middleInitial" name="middleInitial" placeholder="M" maxlength="1">
+                </span>
+            
+                <span class="basic-information">
+                    <label for="lastName">Last Name</label>
+                    <input type="text" id="lastName" name="lastName" value="Ijiogbe" required>
+                </span>
+            
+                <span class="basic-information">
+                    <label for="nickname">Nickname</label>
+                    <input type="text" id="nickname" name="nickname" placeholder="Steph">
+                </span>
+            
+                <span class="basic-information">
+                    <label for="mascot">Mascot</label>
+                    <input type="text" id="mascot" name="mascot" value="Secretive Impala" required>
+                </span>
             </p>
+              
+            <p>
+                <label for="image">Image (PNG or JPG)</label>
+                <input type="file" id="image" name="image" accept="image/png, image/jpeg">
+            </p>
+            <img id="previewImage" src="images/itis3135_intro_figure.jpg"  alt="Stephanie in a white shirt smiling in front of a mirror" class="image-preview">
 
-            <p>
-                <label for="lastName">Last Name:</label>
-                <input type="text" id="lastName" name="lastName" value="Ijiogbe" required>
+            <p class="image-information-row">
+                <span class="image-information">
+                    <label for="imageAlt">Image Alt Text</label>
+                    <input type="text" id="imageAlt" name="imageAlt" value="Stephanie in a white shirt smiling in front of a mirror" required>
+                </span>
+            
+                <span class="image-information">
+                    <label for="imageCaption">Image Caption</label>
+                    <input type="text" id="imageCaption" name="imageCaption" value="At a family photoshoot" required>
+                </span>
             </p>
               
             <p>
-                <label for="mascot">Mascot:</label>
-                <input type="text" id="mascot" name="mascot" value="Secretive Impala" required>
+                <label for="personalBackground">Personal Background</label>
+                <textarea id="personalBackground" name="personalBackground" rows="2" required>I was born in Edo State, Nigeria, and moved to the United States when I was 8. I lived in New York for about two years and moved to North Carolina in 2015.</textarea>
             </p>
               
             <p>
-                <label for="image">Image (PNG or JPG):</label>
-                <input type="file" id="image" name="image" accept="image/png, image/jpeg" required>
-            </p>
-
-            <p>
-                <label for="imageAlt">Image Alt Text:</label>
-                <input type="text" id="imageAlt" name="imageAlt" placeholder="Smiling girl in a white shirt" required>
-              </p>
-              
-            <p>
-                <label for="imageCaption">Image Caption:</label>
-                <input type="text" id="imageCaption" name="imageCaption" value="At a family photoshoot" required>
+                <label for="professionalBackground">Professional Background</label>
+                <textarea id="professionalBackground" name="professionalBackground" rows="2" required>I’ve worked various jobs since high school including games booth operator for a fair, catering staff for an event planning company, babysitting, and homework grader.</textarea>
             </p>
               
             <p>
-                <label for="personalBackground">Personal Background:</label>
-                <textarea id="personalBackground" name="personalBackground" rows="4" required>I was born in Edo State, Nigeria, and moved...</textarea>
+                <label for="academicBackground">Academic Background</label>
+                <textarea id="academicBackground" name="academicBackground" rows="2" required>I’m in my junior year here at UNCC. I’m majoring in Computer Science with a concentration in Software Engineering.</textarea>
             </p>
               
             <p>
-                <label for="professionalBackground">Professional Background:</label>
-                <textarea id="professionalBackground" name="professionalBackground" rows="4" required>I’ve worked various jobs since high school including...</textarea>
+                <label for="subjectBackground">Background in Web Development</label>
+                <textarea id="subjectBackground" name="subjectBackground" rows="2" required>I took a couple of web design and application courses in high school so I’m interested in getting more in-depth lessons.</textarea>
             </p>
               
             <p>
-                <label for="academicBackground">Academic Background:</label>
-                <textarea id="academicBackground" name="academicBackground" rows="4" required>I’m in my junior year here at...</textarea>
-            </p>
-              
-            <p>
-                <label for="webDevBackground">Background in Web Development:</label>
-                <textarea id="webDevBackground" name="webDevBackground" rows="4" required>I took a couple of web design and application courses in high school so I’m...</textarea>
-            </p>
-              
-            <p>
-                <label for="primaryPlatform">Primary Computer Platform:</label>
+                <label for="primaryPlatform">Primary Computer Platform</label>
                 <input type="text" id="primaryPlatform" name="primaryPlatform" value="MacOS" required>
             </p>
               
             <div class="courses-section">
-                <p>Courses Currently Taking:</p>
-                <ul id="courses-container"></ul>
+                <p>Courses Currently Taking</p>
+                <ul id="courses-container">
+                    
+                    
+                </ul>
+                
                 <button type="button" id="course-btn">Add Course</button>
             </div>
             
               
     
             <p>
-                <label for="funnyThing">Funny thing?</label>
-                <textarea id="funnyThing" name="funnyThing" placeholder="Funny thing about you" rows="4"></textarea>
+                <label for="funnyThing">Funny/Interesting item about yourself</label>
+                <textarea id="funnyThing" name="funnyThing" placeholder="Funny thing about you" rows="2">I decided to learn the violin and guitar, but I really only know how to play one or two songs on each instrument. When it comes to other songs, I have to go super slow.</textarea>
             </p>
             
             <p>
-                <label for="anythingElse">Anything else?</label>
-                <textarea id="anythingElse" name="anythingElse" placeholder="Any other interesting thing you'd like to add" rows="4"></textarea>
+                <label for="anythingElse">I'd also like to share</label>
+                <textarea id="anythingElse" name="anythingElse" placeholder="Any other interesting thing you'd like to add" rows="2">I'd also like to share:</strong> I come off as super standoffish when people first meet me, but once I get to know them, I get a lot more comfortable around them and I’m more approachable.</textarea>
             </p>
               
             <p>
-                <input type="checkbox" id="agreement" name="agreement" required>
+                <input type="checkbox" id="agreement" name="agreement" required checked>
                 <label for="agreement">I understand that what is on this page is not password protected and I will not put anything here that I don’t want publicly available.
                 </label>
             </p>
