@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe "Secretive Impala" || ITIS 3135 || Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+    <style>
+        .container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: none;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            width: 100%;
+            text-align: center;
+            padding: 10px 0;
+            font-size: 18px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+        }
+
+        .row {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .column {
+            height: 20px;
+            width: 20px;
+            margin: 0 5px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        .column:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h1>Slideshow</h1>
+        <div class="container">
+        
+            <div class="slides">
+                <img src="images/slideshow/slides_1S.jpg" alt="Shoes">
+                <div class="caption">S - for Shoes</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_2T.jpg" alt="Tuk-tuk">
+                <div class="caption">T - for Tuk-tuk</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_3E.jpg" alt="Earrings">
+                <div class="caption">E - for Earrings</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_4P.jpg" alt="Pen">
+                <div class="caption">P - for Pen</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_5H.jpg" alt="Hat">
+                <div class="caption">H - for Hat</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_6A.jpg" alt="Alarm Clock">
+                <div class="caption">A - for Alarm Clock</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_7N.jpg" alt="Necklace">
+                <div class="caption">N - for Necklace</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_8I.jpg" alt="Incense">
+                <div class="caption">I - for Incense</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_9E.jpg" alt="Envelope">
+                <div class="caption">E - for Envelope</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_10I.jpg" alt="Iron">
+                <div class="caption">I - for Iron</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_11J.jpg" alt="Jar">
+                <div class="caption">J - for Jar</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_12I.JPG" alt="iPhone">
+                <div class="caption">I - for iPhone</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_13O.jpg" alt="Ointment">
+                <div class="caption">O - for Ointment</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_14G.jpg" alt="Glasses">
+                <div class="caption">G - for Glasses</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_15B.jpg" alt="Book">
+                <div class="caption">B - for Book</div>
+            </div>
+
+            <div class="slides">
+                <img src="images/slideshow/slides_16E.jpg" alt="Eraser">
+                <div class="caption">E - for Eraser</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="row">
+            <span class="column" onclick="currentSlide(1)">S</span>
+            <span class="column" onclick="currentSlide(2)">T</span>
+            <span class="column" onclick="currentSlide(3)">E</span>
+            <span class="column" onclick="currentSlide(4)">P</span>
+            <span class="column" onclick="currentSlide(5)">H</span>
+            <span class="column" onclick="currentSlide(6)">A</span>
+            <span class="column" onclick="currentSlide(7)">N</span>
+            <span class="column" onclick="currentSlide(8)">I</span>
+            <span class="column" onclick="currentSlide(9)">E</span>
+            <span class="column" onclick="currentSlide(10)">I</span>
+            <span class="column" onclick="currentSlide(11)">J</span>
+            <span class="column" onclick="currentSlide(12)">I</span>
+            <span class="column" onclick="currentSlide(13)">O</span>
+            <span class="column" onclick="currentSlide(14)">G</span>
+            <span class="column" onclick="currentSlide(15)">B</span>
+            <span class="column" onclick="currentSlide(16)">E</span>
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/include.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    
+</body>
+</html>

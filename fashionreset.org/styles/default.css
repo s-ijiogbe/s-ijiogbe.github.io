@@ -1,0 +1,278 @@
+
+
+/* Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F6F7EB;
+    box-sizing: border-box;
+}
+
+/* Header Styling */
+#header {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+header nav {
+    display: flex;
+    gap: 2rem;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-size: 1.1rem;
+    transition: color 0.3s ease-in-out;
+}
+
+a {
+    color: #000;
+}
+
+nav a:hover {
+    color: #b08c97; 
+}
+
+/* Hero Section */
+section {
+    padding: 3rem 3rem;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+#hero-section, #hero-events {
+    padding: 5rem 3rem;
+    margin: 0 auto;
+    background-color: #4E3D42;
+    text-align: center;
+    color: white
+}
+
+#hero-get-involved {
+    padding: 5rem 3rem;
+    margin: 0 auto;
+    background-color: #F6F7EB;
+    text-align: center;
+}
+
+/* Title Styling */
+h2 {
+    font-size: 2.5rem;
+    color: #333;
+}
+
+h3 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+#hero-section p, #hero-get-involved p, #hero-events p {
+    margin: 1rem 0;
+    font-size: 1.2rem;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #436251;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background-color: #385143;
+}
+
+#statistics {
+    background-color: #F6F7EB;
+}
+
+#target {
+    background-color: #4E3D42;
+    color: white;
+}
+
+/* About Page */
+#about-section {
+    background-color: #F6F7EB;
+}
+
+#origins-section {
+    padding-top: 0.3rem;
+    background-color: #4E3D42;
+    color: white
+}
+
+.origins-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: center;
+}
+
+/* Future use */
+/*
+.origins-content p {
+    font-size: 1rem;
+}
+
+.origins-content img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+} */
+
+
+/* Accordion Section (Educational Resources) */
+.accordion {
+    margin: 2rem auto;
+}
+
+.accordion-item {
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    color: #000000;
+}
+
+.accordion-item p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Events & Initiatives Page */
+#event-highlights {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+    max-width: 900px;
+    margin: auto;
+    padding: 2rem;
+}
+
+#event-highlights > div {
+    background-color: #fff;
+    padding: 1.5rem;
+    border: 1px solid #3a3a3a;
+}
+
+.event-card {
+    margin: 1rem auto;
+    padding: 1rem;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    
+    background-color: #4E3D42;
+}
+
+
+.event-card p {
+    font-size: 1rem;
+    color: white;
+}
+
+
+
+
+/* Form Styling (Get Involved Page) */
+#petition-form {
+    padding: 3rem 4rem;
+    margin: 4rem auto;
+    max-width: 700px;
+    background-color: #DE8F6E;
+    border-radius: 25px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+}
+
+form input, form textarea, form button {
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    
+}
+
+.submit-button {
+    background-color: #4E3D42;
+    color: #fff;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background-color: #3a2d31;
+}
+
+
+/* Footer Styling */
+#main-footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.footer-links li {
+    margin: 0 15px;
+}
+
+.footer-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+.footer-links li a:hover {
+    text-decoration: underline;
+}
+
+hr {
+    width: 80%;
+    height: 0.1rem;
+    background-color: #000000;
+}
+
+
+/* Responsive Layout */
+@media screen and (max-width: 768px) {
+    #event-highlights {
+        grid-template-columns: 1fr;
+    }
+}
