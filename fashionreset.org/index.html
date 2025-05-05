@@ -5,51 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fashion Forward, Fashion Reset || Welcome</title>
     <link rel="stylesheet" href="styles/default.css">
+    <link href='https://fonts.googleapis.com/css?family=Jomhuria' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Be%20Vietnam' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Manjari' rel='stylesheet'>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <!-- https://coolors.co/dddbf1-de8f6e-4e3d42-436251-f6f7eb -->
 
-    <style>
-        h2 {
-            color: white;
-        }
-        h3 {
-            font-size: 2rem;
-            color: white;
-        }
-        h4 {
-            font-size: 2rem;
-        }
-    </style>
 </head>
 <body>
     <header id="header">
         <div data-include="components/header.html"></div>
     </header>
     <main>
-        <section id="hero-section">
-            <h2>Waste is Out of Fashion</h2>
-            <p>Join our campaign to demand sustainability and reduce waste in the fashion industry.</p>
-            <a href="involvement.html" class="cta-button">Take Action Now</a>
+        <section id="home-opening">
+            <div class="text-container">
+                <br><br><br><br>
+                <h2 class="home-h2">Waste is Out of Fashion</h2>
+                <p>Fast fashion pollutes our planet and exploits workers. We're demanding a new norm—where fashion respects people and the planet.</p>
+                <a href="involvement.html" class="cta-button">Take Action Now</a>
+            </div>
         </section>
     
         <section id="statistics">
+            <h3 class="home-h3 visually-hidden">Statistics</h3>
             <div class="stat">
-                <h4>92</h4>
-                <p>Million tons of clothing end up in landfills globally each year.</p>
+                <h4 class="home-h4">92</h4>
+                <p>million tons of clothing end up in landfills globally each year.</p>
             </div>
             <div class="stat">
-                <h4>30%</h4>
+                <h4 class="home-h4">30%</h4>
                 <p>of clothing produced is never sold or worn.</p>
             </div>
         </section>
 
         <section id="target">
-            <h3>Our Target: H&M</h3>
+            <h3 class="home-h3">Our Target: H&M</h3>
+            <p>As one of the top global fashion retailers, H&M plays a major role in driving overproduction and waste. Despite their "Conscious Collection" branding, the company continues to contribute to harmful practices. Our campaign demands:</p>
+            <ul>
+                <li>Full transparency in supply chains.</li>
+                <li>Reduction in overproduction and waste.</li>
+                <li>Commitment to living wages for all garment workers.</li>
+            </ul>
+            <a href="involvement.html" class="cta-button">Hold H&M Accountable</a>
         </section>
+
+        <section id="values">
+            <h3 class="home-h3">Why This Matters</h3>
+            <p>The fashion industry produces more than 100 billion garments a year—most of which end up in landfills. Our campaign is about rethinking fashion: from fast to fair, from wasteful to responsible.</p>
+        </section>
+        
     </main>
     <footer>
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/include.js"></script>
+    <script src="scripts/sustain.js"></script>
 </body>
 </html>

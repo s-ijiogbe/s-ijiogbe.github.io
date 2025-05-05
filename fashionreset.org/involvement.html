@@ -3,8 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fashion Forward, Fashion Reset || Welcome</title>
+        <title>Fashion Forward, Fashion Reset || Get Involved</title>
         <link rel="stylesheet" href="styles/default.css">
+        <link href='https://fonts.googleapis.com/css?family=Jomhuria' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Be%20Vietnam' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Manjari' rel='stylesheet'>
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
         <!-- https://coolors.co/dddbf1-de8f6e-4e3d42-436251-f6f7eb -->
     </head>
@@ -13,16 +16,20 @@
             <div data-include="components/header.html"></div>
         </header>
         <main>
-            <section id="hero-get-involved" class="section">
-                <h2>Take Action to Make Fashion Sustainable</h2>
+            <section id="get-involved-opening" class="involvement-section">
+                <br><br>
+                <br>
+                <h2 class="involvement-h2">Take Action to Make Fashion Sustainable</h2>
                 <p>Help us make a difference - sign the petition!</p>
                 <a href="#petition-form" class="cta-button">Sign the Petition</a>
+                <br><br>
+                <br>
             </section>
             <hr>
 
-            <section id="petition-form" class="section">
-                <h3>Sign the Petition</h3>
-                <form action="/submit-petition" method="post">
+            <section id="petition-form" class="involvement-section">
+                <h3 class="involvement-h3">Sign the Petition</h3>
+                <form action="https://formspree.io/f/xzzrrbpg" method="POST">
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
                     <label for="email">Email Address:</label>
@@ -38,5 +45,6 @@
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/include.js"></script>
+    <script src="scripts/sustain.js"></script>
 </body>
 </html>

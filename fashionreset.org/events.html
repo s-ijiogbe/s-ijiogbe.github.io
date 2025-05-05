@@ -3,16 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Fashion Forward, Fashion Reset || Welcome</title>
+        <title>Fashion Forward, Fashion Reset || Events</title>
         <link rel="stylesheet" href="styles/default.css">
+        <link href='https://fonts.googleapis.com/css?family=Jomhuria' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Be%20Vietnam' rel='stylesheet'>
+        <link href='https://fonts.googleapis.com/css?family=Manjari' rel='stylesheet'>
         <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
         <!-- https://coolors.co/dddbf1-de8f6e-4e3d42-436251-f6f7eb -->
 
-        <style>
-            section {
-                background-color: #F6F7EB;
-            }
-        </style>
     </head>
     <body>
         <header id="header">
@@ -20,38 +18,61 @@
         </header>
         <main>
 
-            <section id="hero-events" class="section">
-                <h2>Explore Our Campaign in Action</h2>
+            <section id="events-opening" class="about-section">
+                <h2 class="events-h2">Explore Our Campaign in Action</h2>
                 <p>See how we’re making a difference in sustainable fashion through events and initiatives.</p>
             </section>
 
-            <section id="event-highlights">
-                <div>
-                    <h3>Upcoming Events</h3>
+            <section id="event-tabs" class="about-section">
+                <h3 class="events-h3">Events & Initiatives</h3>
+                <div class="tabs">
+                    <button class="tab-button tab-button-active" data-tab="upcoming" onclick="openScopedTab('event-tabs', 'upcoming')">Upcoming Events</button>
+                    <button class="tab-button" data-tab="featured" onclick="openScopedTab('event-tabs', 'featured')">Featured Events</button>
+                  </div>
+            
+                <div class="tab-content tab-content-active" id="upcoming">
                     <div class="event-card">
-                        <h4>Clothing Swap</h4>
-                        <p>Date:  | Location: </p>
+                        <h4 class="events-h4">Clothing Swap</h4>
+                        <p>Date: September 12, 2025 | Location: Bell Tower, Chapel Hill, NC 27514</p>
                         <p>Bring your used clothes and exchange them for something new while promoting sustainability.</p>
                     </div>
                     <div class="event-card">
-                        <h4>Legislative Lobbying</h4>
-                        <p>Date: | Location: </p>
-                        <p>Description</p>
+                        <h4 class="events-h4">Poster Making</h4>
+                        <p>Date: October 3, 2025 | Location: 209 South Rd, Chapel Hill, NC 27599</p>
+                        <p>Join us in making awareness posters to make our efforts visible.</p>
                     </div>
                 </div>
-                <div>
-                    <h3>Featured Events</h3>
+            
+                <div class="tab-content" id="featured">
                     <div class="event-card">
-                        <h4>Clothing Swap</h4>
-                        <p>Date:  | Location: </p>
+                        <h4 class="events-h4">Legislative Lobbying</h4>
+                        <p>Date: March 24, 2025 | Location: 
+                            16 W Jones St, Raleigh, NC 27601</p>
+                        <p>Join efforts to push sustainable fashion legislation forward.</p>
+                    </div>
+                    <div class="event-card">
+                        <h4 class="events-h4">Poster Making</h4>
+                        <p>Date: February 21, 2025 | Location: 209 South Rd, Chapel Hill, NC 27599</p>
+                        <p>Join us in making awareness posters to make our efforts visible.</p>
+                    </div>
+                    <div class="event-card">
+                        <h4 class="events-h4">Clothing Swap</h4>
+                        <p>Date: September 13, 2024 | Location: Bell Tower, Chapel Hill, NC 27514</p>
                         <p>Bring your used clothes and exchange them for something new while promoting sustainability.</p>
                     </div>
-                    <div class="event-card">
-                        <h4>Legislative Lobbying</h4>
-                        <p>Date: | Location: </p>
-                        <p>Description</p>
-                    </div>
                 </div>
+            </section>
+
+            <section id="events-gallery" class="about-section">
+                <h3 class="events-h3">Gallery</h3>
+                <div class="collage-gallery">
+                    <div class="gallery-item"><img src="images/1000002647.jpg" alt="Clothing swap event"><div class="overlay">Clothing Swap</div></div>
+                    <div class="gallery-item"><img src="images/1000001836.jpg" alt="Poster making workshop"><div class="overlay">Poster Making</div></div>
+                    <div class="gallery-item"><img src="images/1000002544.jpg" alt="Lobbying event"><div class="overlay">Legislative Lobbying</div></div>
+                    <div class="gallery-item"><img src="images/1000002646.jpg" alt="Clothing exchange"><div class="overlay">Clothing Swap</div></div>
+                    <div class="gallery-item"><img src="images/1000002550.jpg" alt="Clothing exchange"><div class="overlay">Clothing Swap</div></div>
+                    <div class="gallery-item"><img src="images/1000002648.jpg" alt="Clothing exchange event"><div class="overlay">Clothing Swap</div></div>
+                  </div>
             </section>
     </main>
 
@@ -59,5 +80,6 @@
         <div data-include="components/footer.html"></div>
     </footer>
     <script src="scripts/include.js"></script>
+    <script src="scripts/sustain.js"></script>
 </body>
 </html>
