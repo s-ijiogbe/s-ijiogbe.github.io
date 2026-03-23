@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe's Secretive Impala || ITSC 1110 || Slideshow</title>
+    <link rel="stylesheet" href="styles/default.css">
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            position: relative;
+            max-width: 80%;
+            margin: auto;
+            overflow: hidden;
+            border: 2px solid #5a189a;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .slides {
+            display: none;
+            position: relative;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 8px;
+            background: rgba(0, 0, 0, 0.7);
+            color: #e0aaff;
+            width: 100%;
+            text-align: center;
+            padding: 8px 12px;
+            font-size: 15px;
+            box-sizing: border-box;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -22px;
+            padding: 16px;
+            color: #c9ada7;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            background-color: rgba(0, 0, 0, 0.5);
+            border-radius: 5px;
+            user-select: none;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(90, 24, 154, 0.8);
+        }
+
+        .prev {
+            left: 5px;
+        }
+
+        .next {
+            right: 5px;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .row {
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .column {
+            height: 15px;
+            width: 15px;
+            margin: 0 2px;
+            background-color: #3c096c;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+            transition: background-color 0.6s ease;
+        }
+
+        .active, .column:hover {
+            background-color: #9d4edd;
+        }
+
+        .fade {
+            animation-name: fade;
+            animation-duration: 1.5s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div data-include="components/header.html"></div>
+    </header>
+
+    <main>
+        <h1>Slideshow</h1>
+        <div class="container">
+
+            <div class="slides fade">
+                <img src="images/mascot_0.png" style="width:100%" alt="A plain Impala">
+                <div class="caption">The Natural Impala</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_1.png" style="width:100%" alt="Impala in dreary atmosphere">
+                <div class="caption">Mysterious Surroundings</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_2.png" style="width:100%" alt="Impala in moonlit forest">
+                <div class="caption">Stealth Mode: Moonlight</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_3.png" style="width:100%" alt="Impala with spy-like accessories">
+                <div class="caption">Gadgets Ready</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_4.png" style="width:100%" alt="Impala in blues and purples">
+                <div class="caption">Digital Espionage</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_5.png" style="width:100%" alt="Impala peeking from the shadows">
+                <div class="caption">Peeking from the Shadows</div>
+            </div>
+
+            <div class="slides fade">
+                <img src="images/mascot_6_1_cropped.jpg" style="width:100%" alt="The Secretive Impala">
+                <div class="caption">Secretive Impala</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+
+        <div class="row">
+            <span class="column" onclick="currentSlide(1)"></span>
+            <span class="column" onclick="currentSlide(2)"></span>
+            <span class="column" onclick="currentSlide(3)"></span>
+            <span class="column" onclick="currentSlide(4)"></span>
+            <span class="column" onclick="currentSlide(5)"></span>
+            <span class="column" onclick="currentSlide(6)"></span>
+            <span class="column" onclick="currentSlide(7)"></span>
+        </div>
+    </main>
+
+    <footer>
+        <div data-include="components/footer.html"></div>
+    </footer>
+
+    <script src="scripts/include.js"></script>
+    <script src="scripts/slideshow.js"></script>
+    
+</body>
+</html>
