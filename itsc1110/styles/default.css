@@ -25,7 +25,6 @@ header nav {
     height: 150%;
 }
 
-
 header a {
     color: var(--body-color);
     padding: 1.5%;
@@ -40,8 +39,8 @@ main, footer {
     margin-right: auto;
 }
 
-h1, h2, h3, nav {
-    text-align: center;
+nav {
+    line-height: 1.5;
 }
 
 figure > img {
@@ -52,7 +51,7 @@ figure > img {
     height: auto;
 }
 
-figcaption {
+.center {
     text-align: center;
 }
 
@@ -61,12 +60,7 @@ p {
 }
 
 li {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-}
-
-.hangingindent {
-    padding-left: 30px;
-    text-indent: -30px;
+    margin-bottom: 1rem;
 }
 
 #canvas-container {
@@ -75,7 +69,6 @@ li {
     align-items: center;
     margin-top: 40px;
 }
-  
 
 footer {
     margin-top: 5%;
