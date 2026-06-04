@@ -6,6 +6,19 @@
     <title>Stephanie Ijiogbe's Personal Webpage</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
+        :root {
+            --bg:        rgb(210, 207, 203);
+            --ink:       rgb(22, 21, 21);
+            --accent:    #6b2d2d;
+            --muted:     rgb(100, 95, 90);
+            --card-bg:   rgba(255,255,255,0.38);
+            --card-border: rgba(22,21,21,0.12);
+        }
+
+        *, *::before, *::after {
+            box-sizing: border-box;
+        }
+
         body {
             background-color: rgb(210, 207, 203);
             font-family: Bodoni MT, Garamond, serif;
@@ -14,18 +27,107 @@
             padding: 1% 15%;
             color: rgb(22, 21, 21);
         }
+
+        section {
+            margin: 3.5rem 0;
+        }
+
         h1, h2, nav {
             text-align: center;
         }
-        nav > p > a {
+
+        h3 {
+            margin: 0 0 0.3rem;
+            font-size: 1.1rem;
+        }
+
+        nav {
+            font-size: 0.9rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        a {
             color: rgb(22, 21, 21);
         }
-        nav > p > a:hover {
+        nav a:hover {
             color: brown;
         }
         p {
             margin: 2rem;
         }
+
+        .project-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+            gap: 1.4rem;
+        }
+
+        .project-card {
+            background: var(--card-bg);
+            border: 1px solid var(--card-border);
+            padding: 1.4rem 1.5rem;
+            transition: box-shadow 0.2s;
+        }
+
+        .project-card:hover {
+            box-shadow: 3px 3px 0 var(--card-border);
+        }
+
+        .project-card .stack {
+            font-size: 0.8rem;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin: 0 0 0.6rem;
+        }
+
+        .project-card .role-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            border: 1px solid var(--card-border);
+            padding: 0.1rem 0.5rem;
+            margin-bottom: 0.7rem;
+            letter-spacing: 0.06em;
+        }
+
+        .project-card p  {
+            margin: 0 0 0.6rem; font-size: 0.97rem;
+        }
+
+        .project-card ul {
+            margin: 0 0 0 1.1rem;
+            padding: 0;
+            font-size: 0.93rem;
+        }
+
+        .project-card li {
+            margin-bottom: 0.25rem;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 0.8rem 2rem;
+        }
+
+        .skill-group dt {
+            font-size: 0.75rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 0.25rem;
+        }
+
+        .skill-group dd {
+            margin: 0;
+            font-size: 0.97rem;
+        }
+
+        #contact p {
+            margin: 0.5rem 0;
+        }
+
         .validation-link {
             border:0;
             width:88px;
@@ -40,28 +142,134 @@
 <body>
     <header>
         <h1>Stephanie Ijiogbe</h1>
+        <nav>
+            <a href="#about">About</a>
+            |
+            <a href="#projects">Projects</a>
+            |
+            <a href="#skills">Skills</a>
+            |
+            <a href="#contact">Contact</a>
+        </nav>
     </header>
+
     <main>
-        <h2>Home</h2>
-        <p>Hello, my name is Stephanie, and I'm a Computer Science major, with a concentration is Software Engineering. This is my personal webpage. From here, you can access my GitHub, LinkedIn, and various projects I've worked on in the past.</p>
-        <p>Check out the available links in the footer!</p>
+        <section id="intro">
+            <h2>Computer Science Student | Software Engineering Focus</h2>
+            <p>I am a Computer Science student with a concentration in Software Engineering. I build projects in Java, Python, web development, and mobile application development.</p>
+        </section>
+
+        <section id="about">
+            <h2>About Me</h2>
+            <p>
+                I enjoy designing and building software across the full stack. My coursework and projects have given me hands-on experience with object-oriented systems, human-centered design, web development, and mobile applications. I'm equally comfortable writing back-end logic, crafting front-end interfaces, and producing the documentation and diagrams that keep a team aligned.
+            </p>
+            <p>
+                Outside of building things I support other students as an Instructor's Assistant and Student Grader, which has sharpened how I explain concepts and give constructive feedback.
+            </p>
+        </section>
+
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-grid">
+
+                <article class="project-card">
+                    <h3>HealthQuest Wellness</h3>
+                    <p class="stack">Swift · SwiftUI · Firebase</p>
+                    <span class="role-badge">Documentation Lead &amp; Backlog Manager</span>
+                    <p>HIPAA-compliant iOS mental health platform built for a real practice and demoed to an industry professional.</p>
+                    <ul>
+                        <li>Managed the product backlog across three sprints, authoring sprint reports, system requirements, acceptance criteria, and architecture documentation.</li>
+                        <li>Maintained GitHub issue tracking with pre/post-conditions and sprint assignments across the full SDLC.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>Thryve</h3>
+                    <p class="stack">Java · JavaFX · JSON</p>
+                    <span class="role-badge">Individual</span>
+                    <p>Full-stack productivity and wellness desktop app with persistent JSON-based file storage.</p>
+                    <ul>
+                        <li>Applied MVC architecture with Observer and Singleton design patterns for a modular, maintainable codebase.</li>
+                        <li>Produced use case, activity, and class diagrams before implementation.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>TableTuned</h3>
+                    <p class="stack">Figma</p>
+                    <span class="role-badge">Team Lead &amp; UX Designer</span>
+                    <p>Dietary-inclusive restaurant discovery app designed through the full human-centered design process.</p>
+                    <ul>
+                        <li>Led user surveys, Figma prototyping, and usability tests with real participants to validate the design.</li>
+                        <li>Designed a collaborative group dining feature letting users suggest and vote on restaurants together.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>MediaMe</h3>
+                    <p class="stack">Python · Django · HTML · CSS · SQLite</p>
+                    <span class="role-badge">Front-End Lead</span>
+                    <p>Media recommendation and discussion platform serving personalized content to users.</p>
+                    <ul>
+                        <li>Built responsive Django template interfaces for discussion forums, feed views, and recommendation pages.</li>
+                        <li>Developed Django models and a recommendation system surfacing suggestions based on user preferences.</li>
+                    </ul>
+                </article>
+
+                <article class="project-card">
+                    <h3>Fashion Reset</h3>
+                    <p class="stack">HTML · CSS · JavaScript</p>
+                    <span class="role-badge">Individual</span>
+                    <p>Client-facing campaign site petitioning H&amp;M to adopt sustainable practices.</p>
+                    <ul>
+                        <li>Built interactive JavaScript features including an accordion menu and educational quiz.</li>
+                        <li>Handled all visual design, layout, and web form integration.</li>
+                        <li>Developed a responsive, mobile-friendly user interface to client approval.</li>
+                    </ul>
+                </article>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <dl class="skills-grid">
+                <div class="skill-group">
+                    <dt>Languages</dt>
+                    <dd>HTML, CSS, Python, Java, Swift, C, C++, SQL, JavaScript</dd>
+                </div>
+                <div class="skill-group">
+                    <dt>Frameworks &amp; Tools</dt>
+                    <dd>JavaFX, SwiftUI, Django, Firebase, Git</dd>
+                </div>
+                <div class="skill-group">
+                    <dt>Design &amp; Docs</dt>
+                    <dd>Figma, Lucidchart, UML diagrams</dd>
+                </div>
+                <div class="skill-group">
+                    <dt>Other</dt>
+                    <dd>Microsoft 356, Adobe Photoshop</dd>
+                </div>
+            </dl>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+
+            <p>Email: s.ijiogbe@gmail.com</p>
+            <p>GitHub: <a href="https://github.com/s-ijiogbe">github.com/s-ijiogbe</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/stephanie-ijiogbe/">linkedin.com/in/stephanie-ijiogbe</a></p>
+        </section>
     </main>
+
     <footer>
         <nav>
             <p>
-                <a href = "https://webpages.charlotte.edu/sijiogbe/">CLT web</a>
-                |
                 <a href = "https://github.com/s-ijiogbe">GitHub.com</a>
                 |
-                <a href = "https://s-ijiogbe.github.io/">GitHub.io</a>
-                |
-                <a href = "itis3135/">ITIS3135</a>
-                |
-                <a href = "itsc1110/">ITSC1110</a>
+                <a href = "courses.html">Courses</a>
                 |
                 <a href = "https://www.linkedin.com/in/stephanie-ijiogbe/">LinkedIn</a>
-                |
-                <a href="fashionreset.org/">Client Project</a>
             </p>
 
             <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">

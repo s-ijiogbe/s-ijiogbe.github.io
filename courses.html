@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stephanie Ijiogbe's Personal Webpage</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-color: rgb(210, 207, 203);
+            font-family: Bodoni MT, Garamond, serif;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1% 15%;
+            color: rgb(22, 21, 21);
+        }
+        h1, h2, nav {
+            text-align: center;
+        }
+        nav > p > a, a {
+            color: rgb(22, 21, 21);
+        }
+        nav > p > a:hover {
+            color: brown;
+        }
+        p {
+            margin: 2rem;
+        }
+
+        .courses-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+        }
+
+        .course-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,.08);
+        }
+
+        .course-card a {
+            display: inline-block;
+            margin-top: 1rem;
+            text-decoration: none;
+        }
+
+        .validation-link {
+            border:0;
+            width:88px;
+            height:31px;
+        }
+
+        footer {
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Stephanie Ijiogbe</h1>
+</header>
+<main>
+
+    <section class="courses-grid">
+
+        <h2>Course Work</h2>
+
+        <article class="course-card">
+            <h3>ITIS 3135</h3>
+            <p>Web-Based Application Design and Development</p>
+
+            <p>
+                Learned HTML, CSS, JavaScript, accessibility,
+                responsive design, and web standards.
+            </p>
+
+            <a href="itis3135/">View Course Work →</a>
+        </article>
+
+        <article class="course-card">
+            <h3>ITSC 1110</h3>
+            <p>Introduction to Computer Science Principles</p>
+
+            <p>
+                Developed problem-solving skills and
+                learned fundamental programming concepts.
+            </p>
+
+            <a href="itsc1110/">View Course Work →</a>
+        </article>
+
+    </section>
+</main>
+<footer>
+    <nav>
+        <p>
+            <a href = "https://webpages.charlotte.edu/sijiogbe/">CLT web</a>
+            |
+            <a href = "https://github.com/s-ijiogbe">GitHub.com</a>
+            |
+            <a href = "https://s-ijiogbe.github.io/">GitHub.io</a>
+            |
+            <a href = "itis3135/">ITIS3135</a>
+            |
+            <a href = "itsc1110/">ITSC1110</a>
+            |
+            <a href = "https://www.linkedin.com/in/stephanie-ijiogbe/">LinkedIn</a>
+            |
+            <a href="fashionreset.org/">Client Project</a>
+        </p>
+
+        <a href="https://validator.w3.org/check?uri=referer" id="validation-link-html">
+            <img class="validation-link" src="https://mytienhoang.github.io/itis3135/z_archives/html_validation.png" alt="Valid HTML!"></a>
+        <a href="https://jigsaw.w3.org/css-validator/check/referer" id="validation-link-css">
+            <img class="validation-link" src="https://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!"></a>
+    </nav>
+</footer>
+</body>
+</html>
