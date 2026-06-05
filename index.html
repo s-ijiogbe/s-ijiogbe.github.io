@@ -6,15 +6,6 @@
     <title>Stephanie Ijiogbe's Personal Webpage</title>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        :root {
-            --bg:        rgb(210, 207, 203);
-            --ink:       rgb(22, 21, 21);
-            --accent:    #6b2d2d;
-            --muted:     rgb(100, 95, 90);
-            --card-bg:   rgba(255,255,255,0.38);
-            --card-border: rgba(22,21,21,0.12);
-        }
-
         *, *::before, *::after {
             box-sizing: border-box;
         }
@@ -35,18 +26,15 @@
         h1, h2, nav {
             text-align: center;
         }
-
         h3 {
             margin: 0 0 0.3rem;
             font-size: 1.1rem;
         }
-
         nav {
             font-size: 0.9rem;
             letter-spacing: 0.12em;
             text-transform: uppercase;
         }
-
         a {
             color: rgb(22, 21, 21);
         }
@@ -57,68 +45,59 @@
             margin: 2rem;
         }
 
-        .project-grid {
+        #project-layout {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
             gap: 1.4rem;
         }
-
         .project-card {
-            background: var(--card-bg);
-            border: 1px solid var(--card-border);
+            background: rgba(255,255,255,0.38);
+            border: 1px solid rgba(22,21,21,0.12);
             padding: 1.4rem 1.5rem;
             transition: box-shadow 0.2s;
         }
-
         .project-card:hover {
-            box-shadow: 3px 3px 0 var(--card-border);
+            box-shadow: 3px 3px 0 rgba(22,21,21,0.12);
         }
-
         .project-card .stack {
             font-size: 0.8rem;
             letter-spacing: 0.08em;
             text-transform: uppercase;
-            color: var(--accent);
+            color: rgb(107, 45, 45);
             margin: 0 0 0.6rem;
         }
-
         .project-card .role-badge {
             display: inline-block;
             font-size: 0.75rem;
-            border: 1px solid var(--card-border);
+            border: 1px solid rgba(22,21,21,0.12);
             padding: 0.1rem 0.5rem;
             margin-bottom: 0.7rem;
             letter-spacing: 0.06em;
         }
-
         .project-card p  {
             margin: 0 0 0.6rem; font-size: 0.97rem;
         }
-
         .project-card ul {
             margin: 0 0 0 1.1rem;
             padding: 0;
             font-size: 0.93rem;
         }
-
         .project-card li {
             margin-bottom: 0.25rem;
         }
 
-        .skills-grid {
+        #skills-layout {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 0.8rem 2rem;
         }
-
         .skill-group dt {
             font-size: 0.75rem;
             letter-spacing: 0.15em;
             text-transform: uppercase;
-            color: var(--muted);
+            color: rgb(100, 95, 90);
             margin-bottom: 0.25rem;
         }
-
         .skill-group dd {
             margin: 0;
             font-size: 0.97rem;
@@ -165,13 +144,13 @@
                 I enjoy designing and building software across the full stack. My coursework and projects have given me hands-on experience with object-oriented systems, human-centered design, web development, and mobile applications. I'm equally comfortable writing back-end logic, crafting front-end interfaces, and producing the documentation and diagrams that keep a team aligned.
             </p>
             <p>
-                Outside of building things I support other students as an Instructor's Assistant and Student Grader, which has sharpened how I explain concepts and give constructive feedback.
+                Outside building pages and sites, I support other students as an Instructor's Assistant and Student Grader, which has sharpened how I explain concepts and give constructive feedback.
             </p>
         </section>
 
         <section id="projects">
             <h2>Featured Projects</h2>
-            <div class="project-grid">
+            <div id="project-layout">
 
                 <article class="project-card">
                     <h3>HealthQuest Wellness</h3>
@@ -233,7 +212,7 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <dl class="skills-grid">
+            <dl id="skills-layout">
                 <div class="skill-group">
                     <dt>Languages</dt>
                     <dd>HTML, CSS, Python, Java, Swift, C, C++, SQL, JavaScript</dd>
